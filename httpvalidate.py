@@ -275,7 +275,21 @@ def main_menu():
     print("22. Malformed JSON Message Test")
     print("23. Malformed SOAP Message Test")
     print("24. Malformed URL Test")
-    print("25. Good URL Test")
+
+    print("25. Null Char in Header Name Test")
+    print("26. Null Char in Header Value Test")
+
+    print("27. Null Char in Param Test")
+    print("28. Null Char in Param Value Test")
+    print("29. Post Request Missing Content Type Test")
+    print("30. Redundant HTTP Headers Test")
+    print("31. Slow HTTP from Single Source Test")
+    print("32. Too Many Cookies in a Request Test")
+    print("33. Too Many Headers Per Request Test")
+    print("34. Too Many URL Parameters Test")
+    print("35. URL is Above Root Directory Test")
+    print("36. Unknown HTTP Request Method Test")
+    print("37. Good URL Test")
 
 
 def url_prompt():
@@ -340,8 +354,31 @@ def main():
             elif choice == '24':
                 malformed_url_test(url)
             elif choice == '25':
+                null_char_in_header_name_test(url)
+            elif choice == '26':
+                null_char_in_header_value_test(url)
+            elif choice == '27':
+                null_char_in_param_name_test(url)
+            elif choice == '28':
+                null_char_in_param_value_test(url)
+            elif choice == '29':
+                post_request_missing_content_type_test(url)
+            elif choice == '30':
+                redundant_http_headers_test(url)
+            elif choice == '31':
+                slow_http_from_single_source_test(url)
+            elif choice == '32':
+                too_many_cookies_in_a_request_test(url)
+            elif choice == '33':
+                too_many_headers_per_request_test(url)
+            elif choice == '34':
+                too_many_url_parameters_test(url)
+            elif choice == '35':
+                url_is_above_root_directory_test(url)
+            elif choice == '36':
+                unknown_http_request_method_test(url)
+            elif choice == '37':
                 good_test(url)
-
 
 if __name__ == "__main__":
     main()
